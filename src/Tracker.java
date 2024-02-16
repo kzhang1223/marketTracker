@@ -1,5 +1,7 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Tracker {
 
@@ -7,21 +9,21 @@ public class Tracker {
     // should have functions that can calculate the total amount sold and number of items sold
     // maybe will implement date/time in the future
 
-    private List<Item> inStock;
-    private List<Item> outOfStock;
+    private HashMap<Item, Integer> inStock;
+    private HashMap<Item, Integer> outOfStock;
 
     public Tracker() {
-        inStock = new ArrayList<>();
-        outOfStock = new ArrayList<>();
+        inStock = new HashMap<>();
+        outOfStock = new HashMap<>();
     }
 
     // EFFECTS: adds an item to the inStock list
-    public void addInStock(Item item) {
+    public void addInStock(Item item, int quantity) {
         // TODO
     }
 
     // EFFECTS: adds an item to the outOfStock list
-    public void addOutOfStock(Item item) {
+    public void addOutOfStock(Item item, int quantity) {
         // TODO
     }
 
@@ -31,11 +33,11 @@ public class Tracker {
     }
 
     // getters
-    public List<Item> getInStock() {
+    public HashMap<Item, Integer> getInStock() {
         return inStock;
     }
 
-    public List<Item> getOutOfStock() {
+    public HashMap<Item, Integer> getOutOfStock() {
         return outOfStock;
     }
 }

@@ -6,21 +6,13 @@ public class Item {
     private String name;
     private String category;
     private double price;
-    private int quantity;
     private String colour;
 
-    public Item(String name, String category, double price, int quantity) {
+    public Item(String name, String category, double price) {
         this.name = name;
         this.category = category;
         this.price = price;
-        this.quantity = quantity;
         this.colour = null;
-    }
-
-    // REQUIRES: quantity > 0
-    // EFFECTS: subtracts quantity by one
-    public void subtractQuantityByOne() {
-        this.quantity = this.quantity - 1;
     }
 
     // setters and getters
@@ -34,10 +26,6 @@ public class Item {
 
     public void setPrice(double price) {
         this.price = price;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
     }
 
     public void setColour(String colour) {
@@ -54,10 +42,6 @@ public class Item {
 
     public double getPrice() {
         return this.price;
-    }
-
-    public int getQuantity() {
-        return this.quantity;
     }
 
     public String getColour() {

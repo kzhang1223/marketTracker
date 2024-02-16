@@ -17,19 +17,6 @@ public class ItemTest {
         assertEquals("Kirby", kirby.getName());
         assertEquals("Keychain", kirby.getCategory());
         assertEquals(5.00, kirby.getPrice());
-        assertEquals(10, kirby.getQuantity());
         assertNull(kirby.getColour());
-    }
-
-    @Test
-    void testSubtractQuantityByOne() {
-        // subtract one quantity
-        kirby.subtractQuantityByOne();
-        assertEquals(9, kirby.getQuantity());
-
-        // subtract multiple consecutively
-        kirby.subtractQuantityByOne();
-        kirby.subtractQuantityByOne();
-        assertEquals(7, kirby.getQuantity());
     }
 }
